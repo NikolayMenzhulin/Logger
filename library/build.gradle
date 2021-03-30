@@ -1,0 +1,7 @@
+apply plugin: ('kotlin')
+apply plugin: ('java-library')
+
+apply from: rootProject.file('config.gradle')
+
+dependencies {
+}
