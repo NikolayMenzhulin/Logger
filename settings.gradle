@@ -1,3 +1,2 @@
 rootProject.name = 'Logger'
 include ':library'
-include ':sample'
