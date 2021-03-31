@@ -1,0 +1,18 @@
+apply plugin: ('com.android.library')
+apply plugin: ('kotlin-android')
+
+apply from: rootProject.file('config.gradle')
+apply from: ('publishing.gradle')
+
+android {
+    defaultConfig {
+        buildToolsVersion build_tools_v
+        compileSdkVersion compile_sdk_v
+        minSdkVersion min_sdk_v
+        targetSdkVersion target_sdk_v
+    }
+}
+
+dependencies {
+    implementation "com.jakewharton.timber:timber:$timber_v"
+}
