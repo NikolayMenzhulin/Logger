@@ -4,6 +4,10 @@ import android.util.Log.ERROR
 import com.github.nikolaymenzhulin.logger.strategies.strategy.base.LoggerStrategy
 import java.io.PrintStream
 
+/**
+ * [LoggerStrategy] using [PrintStream] for logging.
+ * It is supposed to be used in testing.
+ */
 class TestLoggerStrategy : LoggerStrategy {
 
     override fun log(priority: Int, message: String, error: Throwable?, vararg args: Any) {

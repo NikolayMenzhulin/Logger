@@ -4,6 +4,9 @@ import com.github.nikolaymenzhulin.logger.Logger
 import com.github.nikolaymenzhulin.logger.strategies.strategy.base.LoggerStrategy
 import timber.log.Timber
 
+/**
+ * [LoggerStrategy] using [Timber] for logging.
+ */
 class TimberLoggerStrategy : LoggerStrategy {
 
     init {
