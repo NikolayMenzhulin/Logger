@@ -5,7 +5,7 @@ A small library for logging which supports different priorities and strategies.
 [![build](https://github.com/NikolayMenzhulin/Logger/actions/workflows/ci-build.yml/badge.svg)](https://github.com/NikolayMenzhulin/Logger/actions/workflows/ci-build.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nikolaymenzhulin/logger/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nikolaymenzhulin/logger) [![License](https://img.shields.io/badge/license-Apache%202.0-dark.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 ## Usage
 
-Logger works with strategies that must be extends from [LoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/base/LoggerStrategy.kt) interface. Library already provides two realisation: [TimberLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TimberLoggerStrategy.kt) based on [Timber](https://github.com/JakeWharton/timber) logger and [TestLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TestLoggerStrategy.kt) orientired on using in tests. In addition to these, you can implement your own.  
+Logger works with strategies that must be extends from [LoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/base/LoggerStrategy.kt) interface. Library already provides two realisation: [TimberLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TimberLoggerStrategy.kt) based on [Timber](https://github.com/JakeWharton/timber) logger and [TestLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TestLoggerStrategy.kt) orientired on using in tests. In addition to these, you can implement your own. By default Logger uses TimberLoggerStrategy.  
 
 Use a following example of code to add strategies:
 ```kotlin
@@ -48,7 +48,7 @@ allprojects {
 **Step 2.** Add the dependency:
 ```groovy
 dependencies {
-    implementation 'com.github.nikolaymenzhulin:logger:1.0.0'
+    implementation 'com.github.nikolaymenzhulin:logger:1.1.0'
 }
 ```
 
