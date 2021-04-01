@@ -15,6 +15,7 @@
 */
 package com.github.nikolaymenzhulin.logger.strategies
 
+import com.github.nikolaymenzhulin.logger.strategies.strategy.TimberLoggerStrategy
 import com.github.nikolaymenzhulin.logger.strategies.strategy.base.LoggerStrategy
 
 /**
@@ -24,6 +25,10 @@ import com.github.nikolaymenzhulin.logger.strategies.strategy.base.LoggerStrateg
 class LoggerStrategiesList(
         private val strategies: MutableList<LoggerStrategy> = mutableListOf()
 ) : MutableList<LoggerStrategy> by strategies {
+
+    init {
+        strategies.add(TimberLoggerStrategy())
+    }
 
     override fun add(element: LoggerStrategy): Boolean =
             if (!contains(element)) strategies.add(element) else false
