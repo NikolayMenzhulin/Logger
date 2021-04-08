@@ -5,7 +5,7 @@ ext {
 
     // POM configuration
     library_name = 'Logger'
-    library_description = 'A small library for logging which supports different priorities and strategies.'
+    library_description = 'The small library for logging which supports different priorities and strategies.'
     library_url = 'https://github.com/NikolayMenzhulin/Logger'
 
     using_license_name = 'The Apache License, Version 2.0'
