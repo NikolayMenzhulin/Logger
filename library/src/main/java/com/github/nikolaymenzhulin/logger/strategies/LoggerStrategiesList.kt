@@ -19,7 +19,7 @@ import com.github.nikolaymenzhulin.logger.strategies.strategy.TimberLoggerStrate
 import com.github.nikolaymenzhulin.logger.strategies.strategy.base.LoggerStrategy
 
 /**
- * List of [LoggerStrategy]. In addition to storing strategies,
+ * The list of [LoggerStrategy]. In addition to storing strategies,
  * it also contains checking for duplicate strategies when they are added to the list.
  */
 class LoggerStrategiesList(

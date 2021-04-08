@@ -18,7 +18,7 @@ package com.github.nikolaymenzhulin.logger.strategies.strategy.base
 import com.github.nikolaymenzhulin.logger.Logger
 
 /**
- * Base interface of logging strategy for [Logger].
+ * The base interface of a logging strategy for [Logger].
  */
 interface LoggerStrategy {
 
