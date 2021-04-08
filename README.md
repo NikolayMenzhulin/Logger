@@ -1,13 +1,13 @@
 # Logger
 
-A small library for logging which supports different priorities and strategies.
+The small library for logging which supports different priorities and strategies.
 
 [![build](https://github.com/NikolayMenzhulin/Logger/actions/workflows/ci-build.yml/badge.svg)](https://github.com/NikolayMenzhulin/Logger/actions/workflows/ci-build.yml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nikolaymenzhulin/logger/badge.svg?)](https://maven-badges.herokuapp.com/maven-central/com.github.nikolaymenzhulin/logger) [![License](https://img.shields.io/badge/license-Apache%202.0-dark.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 ## Usage
 
-Logger works with strategies that must be extends from [LoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/base/LoggerStrategy.kt) interface. Library already provides two realisation: [TimberLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TimberLoggerStrategy.kt) based on [Timber](https://github.com/JakeWharton/timber) logger and [TestLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TestLoggerStrategy.kt) orientired on using in tests. In addition to these, you can implement your own. By default Logger uses TimberLoggerStrategy.  
+Logger works with strategies that must be extends from [LoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/base/LoggerStrategy.kt) interface. The library already provides the two realisations: [TimberLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TimberLoggerStrategy.kt) based on [Timber](https://github.com/JakeWharton/timber) and [TestLoggerStrategy](https://github.com/NikolayMenzhulin/Logger/blob/main/library/src/main/java/com/github/nikolaymenzhulin/logger/strategies/strategy/TestLoggerStrategy.kt) orientired on using in tests. In addition to these, you can implement your own. By default Logger uses TimberLoggerStrategy.  
 
-Use a following example of code to add strategies:
+Use the following example of code to add strategies:
 ```kotlin
 Logger.strategies.add(TimberLoggerStrategy())
 
@@ -16,18 +16,18 @@ Logger.strategies.add(TimberLoggerStrategy())
 val strategies = listOf(TimberLoggerStrategy(), SomeOtherLoggerStrategy())
 Logger.strategies.addAll(strategies)
 ```
-`Logger.strategies` is actually a MutableList, so when working with it you can use all the same methods that a regular MutableList has.  
+`Logger.strategies` is actually a MutableList, so when you working with it you can use all the same methods the regular MutableList has.  
 
-Сode for adding strategies is better placed in a Application class of your app.  
+The code for adding strategies is better placed in the application class of your app.  
 When you try using Logger without strategies it will be throw IllegalStateException.
 
-After adding strategies use a following example of code to log something what you need:
+After adding strategies use the following example of code to log something what you need:
 ```kotlin
 // Logging uses the TimberLoggerStrategy.
 
 Logger.d("Hello world!") // Print "Hello World!" to DEBUG channel of Logcat.
 
-Logger.e(Exception("Error message")) // Print exception with message "Error message" and stacktrace to ERROR channel of Logcat.
+Logger.e(Exception("Error message")) // Print the exception with the message "Error message" and the stacktrace to ERROR channel of Logcat.
 
 Logger.i("Info with args: arg1=%s, arg2=%s", 1, 2) // Print "Info with args: arg1=1, arg2=2" to INFO channel of Logcat.
 
