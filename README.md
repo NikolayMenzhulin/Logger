@@ -23,7 +23,7 @@ When you try using Logger without strategies it will be throw IllegalStateExcept
 
 After adding strategies use the following example of code to log something what you need:
 ```kotlin
-// Logging uses the TimberLoggerStrategy.
+// Logging uses TimberLoggerStrategy.
 
 Logger.d("Hello world!") // Print "Hello World!" to DEBUG channel of Logcat.
 
