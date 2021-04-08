@@ -48,7 +48,7 @@ allprojects {
 **Step 2.** Add the dependency:
 ```groovy
 dependencies {
-    implementation 'com.github.nikolaymenzhulin:logger:1.1.0'
+    implementation 'com.github.nikolaymenzhulin:logger:1.1.1'
 }
 ```
 
